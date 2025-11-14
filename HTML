@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fly2Win VIP - חבילות קזינו פרימיום בחו"ל</title>
+  <meta name="description" content="Fly2Win VIP - טיסות, מלונות 5 כוכבים וחוויית קזינו יוקרתית בחו''ל. הכל ממומן על ידי הקזינו לשחקנים מתאימים.">
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0d1017;
+      --card-bg: #111624;
+      --accent: #d4af37;
+      --accent-soft: rgba(212,175,55,0.15);
+      --text: #f7f7f7;
+      --muted: #a0a4b8;
+      --danger: #ff4d4f;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow-soft: 0 18px 40px rgba(0,0,0,0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #202744 0%, #05060a 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5,6,10,0.92), rgba(5,6,10,0.7));
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 0%, #ffe9a3 0%, #d4af37 35%, #7a5c16 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 18px rgba(212,175,55,0.7);
+      font-weight: 800;
+      font-size: 18px;
+      color: #141414;
+    }
+    .logo-text-main {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: 18px;
+    }
+    .logo-text-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 18px;
+    }
+
+    .nav-cta-btn {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(212,175,55,0.02));
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-cta-btn span {
+      font-size: 16px;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+
+    main {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 18px 16px 60px;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+      margin-top: 26px;
+      margin-bottom: 40px;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(3,4,6,0.8);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #52ffa8;
+      box-shadow: 0 0 10px rgba(82,255,168,0.7);
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.2;
+      margin: 0 0 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 420px;
+      margin-bottom: 18px;
+    }
+
+    .hero-highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-bullets {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 10px 16px;
+      margin: 14px 0 20px;
+      font-size: 14px;
+    }
+
+    .hero-bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .hero-bullet-icon {
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .hero-bullet strong {
+      color: var(--text);
+      display: block;
+      font-size: 13px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ffe9a3, #d4af37);
+      border-radius: 999px;
+      padding: 10px 26px;
+      border: none;
+      color: #141414;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary span {
+      font-size: 18px;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-radius: 999px;
+      padding: 9px 18px;
+      border: 1px solid rgba(255,255,255,0.14);
+      color: var(--muted);
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-note span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, #1f2740 0%, #05060a 60%);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero-img {
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transform: scale(1.02);
+    }
+
+    .hero-img-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(5,6,10,0.95) 0%, rgba(0,0,0,0.4) 45%, transparent 100%);
+    }
+
+    .hero-img-label {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      left: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 13px;
+    }
+
+    .hero-img-hotel {
+      font-weight: 600;
+    }
+
+    .hero-img-city {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hero-img-pill {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(5,6,10,0.8);
+      border: 1px solid rgba(255,255,255,0.16);
+      font-size: 11px;
+    }
+
+    .hero-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-mini-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-mini-stats strong {
+      color: var(--text);
+      font-size: 13px;
+      display: block;
+    }
+
+    .hero-badge-floating {
+      position: absolute;
+      top: -8px;
+      left: -12px;
+      background: rgba(5,6,10,0.94);
+      border-radius: 999px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-badge-floating span {
+      font-size: 15px;
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      left: -4px;
+      bottom: -10px;
+      padding: 10px 14px;
+      border-radius: 16px;
+      background: rgba(5,6,10,0.96);
+      border: 1px solid rgba(212,175,55,0.5);
+      font-size: 11px;
+      max-width: 210px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.8);
+    }
+
+    .hero-floating-card strong {
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(17,22,36,0.96), rgba(11,15,26,0.96));
+      border-radius: var(--radius-md);
+      padding: 16px 16px 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .card-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: var(--muted);
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+
+    .card-list {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card-list li {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .card-list span {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .card-list i {
+      font-style: normal;
+      font-size: 14px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+      font-size: 11px;
+    }
+
+    .tag {
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+    }
+
+    /* Packages */
+    .price-tag {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .price-note {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .highlight-card {
+      border: 1px solid rgba(212,175,55,0.7);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-label {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 11px;
+      border: 1px solid rgba(212,175,55,0.5);
+    }
+
+    /* Testimonials */
+    .testimonial {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .testimonial-name {
+      font-size: 12px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 10px 0;
+    }
+
+    .faq-question {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .faq-answer {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .contact-row {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .contact-row strong {
+      color: var(--text);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: #25d366;
+      color: #041208;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.6);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    form {
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 7px 9px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(5,6,10,0.85);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #555a70;
+    }
+
+    .form-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 14px 16px 20px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      background: rgba(5,6,10,0.98);
+    }
+
+    footer span {
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .grid-3 {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .grid-2 {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-only {
+        display: inline-flex;
+      }
+
+      .hero-title {
+        font-size: 26px;
+      }
+
+      main {
+        padding-inline: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo-wrap">
+      <div class="logo-mark">F2</div>
+      <div>
+        <div class="logo-text-main">Fly2Win VIP</div>
+        <div class="logo-text-sub">חבילות קזינו פרימיום בחו"ל</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#how-it-works">איך זה עובד</a>
+      <a href="#packages">מסלולים</a>
+      <a href="#destinations">יעדים</a>
+      <a href="#faq">שאלות נפוצות</a>
+      <button class="nav-cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+        שריין מקום עכשיו <span>↗</span>
+      </button>
+    </nav>
+    <button class="nav-cta-btn mobile-only" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+      לטופס הרשמה
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="hero-badge-row">
+        <div class="badge">
+          <div class="badge-dot"></div>
+          FLY2WIN VIP CLUB
+        </div>
+        <div class="badge">
+          חבילות קזינו בחו"ל ללא עלות לשחקנים מתאימים
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        טיסות ומלון 5 כוכבים על חשבון הקזינו.
+        <br>
+        <span class="hero-highlight">אתם רק משחקים. אנחנו דואגים לשאר.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Fly2Win VIP מחברת בין שחקנים איכותיים לקזינואים מובילים באירופה.
+        טיסות, מלונות יוקרה, העברות ושירות VIP, ללא עלות לשחקנים שעומדים בתנאי המשחק.
+      </p>
+
+      <div class="hero-bullets">
+        <div class="hero-bullet">
+          <div class="hero-bullet-icon">✈️</div>
+          <div>
+            <strong>טיסה ומלון עלינו</strong>
+            לשחקנים מתאימים הקזינו מממן חבילה מלאה.
+          </div>
+        </div>
+        <div class="hero-bullet">
+          <div class="hero-bullet-icon">🎲</div>
+          <div>
+            <strong>התחייבות משחק ברורה</strong>
+            כמות שעות משחק מוגדרת לכל יום. אין הפתעות קטנות.
+          </div>
+        </div>
+        <div class="hero-bullet">
+          <div class="hero-bullet-icon">👑</div>
+          <div>
+            <strong>ליווי אישי בעברית</strong>
+            ניהול כל התיאומים מההרשמה ועד החזרה לארץ.
+          </div>
+        </div>
+        <div class="hero-bullet">
+          <div class="hero-bullet-icon">💳</div>
+          <div>
+            <strong>שקיפות מלאה</strong>
+            בלי אותיות קטנות. הכל מוסבר מראש, לפני שמתחייבים.
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta-row">
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+          רוצה לבדוק אם אני מתאים? <span>➜</span>
+        </button>
+        <button class="btn-ghost" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'});">
+          איך זה עובד בפועל
+        </button>
+      </div>
+
+      <div class="hero-note">
+        בטיסה הראשונה שלך עם <span>Fly2Win VIP</span> נסביר הכל צעד אחר צעד, בשפה פשוטה, בלי טריקים.
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-badge-floating">
+          <span>⭐</span> קבוצות קטנות ואיכותיות בלבד
+        </div>
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1100&q=80" alt="מלון קזינו יוקרתי">
+          <div class="hero-img-gradient"></div>
+          <div class="hero-img-label">
+            <div>
+              <div class="hero-img-hotel">מלון 5 כוכבים מחובר לקזינו</div>
+              <div class="hero-img-city">בלגרד / בוקרשט / קפריסין ועוד</div>
+            </div>
+            <div class="hero-img-pill">
+              גישה ישירה לקזינו 24/7
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-tag-row">
+          <span>🎰 מסלולי שחקן ואורח</span>
+          <span>🍽 בופה, ברים ומסעדות במתחם</span>
+        </div>
+
+        <div class="hero-mini-stats">
+          <div>
+            <strong>6+</strong>
+            שעות משחק ליום לשחקן במסלול המימון
+          </div>
+          <div>
+            <strong>0 €</strong>
+            עלות טיסה ומלון לשחקנים מתאימים
+          </div>
+          <div>
+            <strong>100%</strong>
+            שקיפות, חוזה ברור לפני הטיסה
+          </div>
+        </div>
+
+        <div class="hero-floating-card">
+          <strong>מינימום בירור, מקסימום חוויה.</strong><br>
+          אתה מספר לנו איך אתה אוהב לשחק, ואנחנו מתאימים לך יעד, תאריך ותנאי משחק מול הקזינו.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <h2 class="section-title">למה Fly2Win VIP ולא עוד "טיול קזינו" רגיל</h2>
+    <p class="section-subtitle">
+      החבילות שלנו נבנות קודם כל עבור שחקנים. הכל מונגש בעברית, עם דגש על אמינות ושקיפות.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">מיקוד בשחקנים איכותיים</div>
+          <div class="card-pill">Player First</div>
+        </div>
+        <p>אנחנו לא סוכנות תיירות רגילה. Fly2Win VIP מייצגת שחקנים מול הקזינואים, ודואגת שתגיעו לתנאים הטובים ביותר האפשריים.</p>
+        <ul class="card-list">
+          <li><i>✔</i><span>התאמת יעד ורמת קזינו לסגנון המשחק שלך</span></li>
+          <li><i>✔</i><span>מסלולי שחקן קבועים וקבוצות שחוזרות שוב</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">אמינות ושקיפות מלאה</div>
+          <div class="card-pill">No small letters</div>
+        </div>
+        <p>לפני ההרשמה תדע בדיוק מה התנאים: מינימום שעות משחק, מסגרת תקציב מומלצת, מה הקזינו נותן ומה אתה מתחייב.</p>
+        <ul class="card-list">
+          <li><i>✔</i><span>הסבר טלפוני מלא לפני סגירה</span></li>
+          <li><i>✔</i><span>הסכם כתוב עם כל התנאים, בעברית</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">חוויית VIP אמיתית</div>
+          <div class="card-pill">VIP Experience</div>
+        </div>
+        <p>העברות, צ'ק אין מהיר, הדרכה על המקום, קבוצות קטנות ואינטימיות. אתה מגיע לשחק וליהנות, לא להסתבך.</p>
+        <ul class="card-list">
+          <li><i>✔</i><span>ליווי בקבוצה, בעברית</span></li>
+          <li><i>✔</i><span>תיאום מסעדות, פעילויות ואטרקציות מסביב</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <h2 class="section-title">אז איך זה עובד בפועל?</h2>
+    <p class="section-subtitle">
+      תהליך הרשמה מסודר, 4 שלבים פשוטים. בלי כאבי ראש ובלי חוסר ודאות.
+    </p>
+
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">1. משאירים פרטים</div>
+          <div class="card-pill">התחלה</div>
+        </div>
+        <p>אתה ממלא טופס קצר. אנחנו חוזרים אליך לשיחה אישית ומבינים מי אתה כשחקן.</p>
+        <ul class="card-list">
+          <li><i>➤</i><span>סגנון משחק, תקציב, יעד מועדף</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">2. התאמת מסלול</div>
+          <div class="card-pill">תכנון</div>
+        </div>
+        <p>יחד נבחר יעד, מלון וקזינו שמתאימים לרמת המשחק שלך ולזמן הפנוי שלך.</p>
+        <ul class="card-list">
+          <li><i>➤</i><span>בלגרד, בוקרשט, קפריסין ועוד</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">3. אישור קזינו</div>
+          <div class="card-pill">אישור</div>
+        </div>
+        <p>אנחנו מעבירים את הפרטים לקזינו, סוגרים תנאי מימון ומאשרים לך שיוצאים לדרך.</p>
+        <ul class="card-list">
+          <li><i>➤</i><span>טיסה, מלון, תנאי שחקן, הכל סגור מראש</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">4. טסים ומשחקים</div>
+          <div class="card-pill">חוויית VIP</div>
+        </div>
+        <p>אתה טס, נהנה מהמלון, משחק לפי התנאים שסגרנו, ואנחנו זמינים לאורך כל הדרך.</p>
+        <ul class="card-list">
+          <li><i>➤</i><span>קבוצה קטנה, אווירה טובה, קזינו צמוד</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages">
+    <h2 class="section-title">מסלולי Fly2Win VIP</h2>
+    <p class="section-subtitle">
+      שני מסלולים עיקריים: שחקן ממומן ואורח מלווה. אפשר לצרף בן או בת זוג, חברים או משפחה.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card highlight-card">
+        <div class="highlight-label">הכי פופולרי</div>
+        <div class="card-header">
+          <div class="card-title">מסלול שחקן VIP ממומן</div>
+        </div>
+        <div class="price-tag">עלות חבילה לשחקן: 0 €</div>
+        <div class="price-note">לשחקנים שעומדים בתנאי המשחק שנקבעים מול הקזינו</div>
+        <p>הקזינו מממן טיסה, מלון, חלק מהארוחות וההעברות. אתה מתחייב לזמן משחק מינימלי בכל יום.</p>
+        <ul class="card-list">
+          <li><i>✔</i><span>טיסות הלוך וחזור</span></li>
+          <li><i>✔</i><span>מלון 4 או 5 כוכבים מחובר לקזינו</span></li>
+          <li><i>✔</i><span>העברה משדה התעופה ובחזרה</span></li>
+          <li><i>✔</i><span>Free Play או בונוס פתיחה בקזינו (כפוף ליעד)</span></li>
+          <li><i>✔</i><span>ליווי אישי ולוגיסטיקה מלאה</span></li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">מינימום שעות משחק ביום</span>
+          <span class="tag">מותאם לשחקנים מנוסים</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">מסלול אורח מלווה</div>
+        </div>
+        <div class="price-tag">מחיר אורח: לפי יעד ותאריך</div>
+        <div class="price-note">בן או בת זוג, חברים, משפחה</div>
+        <p>אורח שמצטרף לשחקן אינו חייב להתחייב לזמן משחק. נהנה מהמלון, מהעיר ומהאווירה.</p>
+        <ul class="card-list">
+          <li><i>✔</i><span>טיסה ומלון לצד השחקן</span></li>
+          <li><i>✔</i><span>אפשרות לאטרקציות וטיולים באזור</span></li>
+          <li><i>✔</i><span>מתאים גם למי שלא משחק בכלל</span></li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">זוגות</span>
+          <span class="tag">חברים</span>
+          <span class="tag">ימי הולדת</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">קבוצות פרטיות ואירועי חברה</div>
+        </div>
+        <div class="price-tag">תמחור מותאם אישית</div>
+        <div class="price-note">מועדוני שחקנים, ארגונים וחברות</div>
+        <p>בונים עבורכם טיול קזינו פרטי: קבוצה סגורה, תוכן מותאם ואפשרות לשילוב כנסים ואירועי חברה.</p>
+        <ul class="card-list">
+          <li><i>✔</i><span>קבוצות החל מ-8 משתתפים</span></li>
+          <li><i>✔</i><span>ניתן לשלב חדרי ישיבות ומינגלינג</span></li>
+          <li><i>✔</i><span>מועדוני פוקר וקבוצות שחקנים קבועות</span></li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">חברות</span>
+          <span class="tag">מועדוני שחקנים</span>
+          <span class="tag">קבוצות סגורות</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section id="destinations">
+    <h2 class="section-title">יעדים פופולריים</h2>
+    <p class="section-subtitle">
+      אנו עובדים עם קזינואים מובילים בערים מרכזיות, עם מלונות צמודים לקזינו ורמת שירות גבוהה.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">בלגרד</div>
+          <div class="card-pill">סצנת קזינו חזקה</div>
+        </div>
+        <p>עיר חיה ותוססת, מסעדות מעולות, מועדונים, נהר מדהים וקזינואים פעילים מסביב לשעון.</p>
+        <ul class="card-list">
+          <li><i>🎰</i><span>קזינו מרכזי עם משחקי שולחן ומכונות</span></li>
+          <li><i>🍽</i><span>מסעדות מקומיות וברים עד השעות הקטנות</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">בוקרשט</div>
+          <div class="card-pill">שילוב של עיר וקזינו</div>
+        </div>
+        <p>יעד אהוב על ישראלים. מלונות טובים, מחירים נוחים, וקזינואים במרחק קצר.</p>
+        <ul class="card-list">
+          <li><i>🎰</i><span>מספר קזינואים במרכז העיר</span></li>
+          <li><i>🏛</i><span>אטרקציות בעיר, קניונים ומתחמי בילוי</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">קפריסין</div>
+          <div class="card-pill">קרוב, נגיש, מרגיש חו"ל</div>
+        </div>
+        <p>טיסה קצרה, קזינואים מודרניים, מלונות על הים. מתאים גם לחופשה קצרה באמצע שבוע.</p>
+        <ul class="card-list">
+          <li><i>🎰</i><span>קזינואים חדשים עם סטנדרט גבוה</span></li>
+          <li><i>🌊</i><span>ים, מסעדות, קניות, ושמש כמעט כל השנה</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS + FAQ -->
+  <section id="faq">
+    <h2 class="section-title">מה אומרים על Fly2Win VIP, ושאלות שמקבלים כל הזמן</h2>
+    <p class="section-subtitle">
+      חלק מהשאלות שחוזרות על עצמן, ותשובות קצרות שיעשו סדר.
+    </p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">חוויות של שחקנים</div>
+          <div class="card-pill">Testimonials</div>
+        </div>
+        <p class="testimonial">
+          "לא האמנתי שבאמת טסתי בלי לשלם על טיסה ומלון. הכל היה סגור מראש בקזינו, כולל בופה. הסבירו לי מראש מה התנאי משחק ולא הרגשתי שמנסים להסתיר משהו."
+        </p>
+        <div class="testimonial-name">י', בן 38, מרכז</div>
+
+        <p class="testimonial">
+          "יצאנו קבוצה של 10 חברים, חלק שיחקו וחלק פחות. Fly2Win VIP דאגו למלון מחובר לקזינו, הסעות, והיו זמינים בוואטסאפ כל הזמן."
+        </p>
+        <div class="testimonial-name">ר', בן 42, צפון</div>
+
+        <p class="testimonial">
+          "בתור אחד שמשחק כמה פעמים בשנה, זה פתרון מעולה. אני יודע כמה אני מתכנן לשחק, והם מביאים את הדיל הכי טוב מהקזינו."
+        </p>
+        <div class="testimonial-name">ד', בן 45, שרון</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">שאלות נפוצות</div>
+          <div class="card-pill">FAQ</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">האם באמת הכל חינם לשחקנים?</div>
+          <div class="faq-answer">
+            לשחקנים שעומדים בתנאי המשחק של הקזינו, החבילה יכולה להיות ממומנת במלואה או בחלקה. אנחנו מסבירים מראש מה התנאים, ומה הקזינו נותן בפועל.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">מה התנאי משחק?</div>
+          <div class="faq-answer">
+            בדרך כלל מדובר בכמות שעות משחק ביום ומסגרת תקציב מינימלית. לכל יעד וקזינו יש תנאים משלו, ואנחנו מציגים אותם בצורה ברורה לפני ההרשמה.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">אני לא שחקן כבד. זה עדיין רלוונטי לי?</div>
+          <div class="faq-answer">
+            כן. יש מסלולים גם לשחקנים שמשחקים במתינות. ייתכן שהמימון יהיה חלקי בלבד, או שתשתתף בעלויות. נעשה ביחד בירור כדי לוודא שזה מתאים לך.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">האם אפשר לצרף בן או בת זוג שלא משחקים?</div>
+          <div class="faq-answer">
+            בוודאי. במסלול אורח, בן או בת הזוג נהנים מהמלון, מהעיר ומהאווירה, בלי להתחייב לשעות משחק. המחיר ייקבע לפי היעד והתאריך.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">איך ממשיכים מפה?</div>
+          <div class="faq-answer">
+            ממלאים את הטופס הקצר למטה או כותבים לנו בוואטסאפ. נקבע שיחה קצרה, נסביר הכל, ואם זה מתאים, נשריין מקום בטיול הבא.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">רוצה לבדוק אם אתה מתאים ל Fly2Win VIP?</h2>
+    <p class="section-subtitle">
+      השלב הבא הוא שיחה קצרה, לא מחייבת, בה נסביר הכל ונבדוק ביחד אם זה מתאים לך. אין פה "לחץ לסגור עכשיו".
+    </p>
+
+    <div class="contact-grid">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">פרטי קשר ישיר</div>
+        </div>
+        <p class="contact-row">
+          <strong>טלפון:</strong> 050-4378400
+        </p>
+        <p class="contact-row">
+          <strong>אימייל:</strong> fly2win.vip@gmail.com
+        </p>
+        <p class="contact-row">
+          <strong>וואטסאפ:</strong> הודעה קצרה עם "מעוניין בטיול קזינו" ואנחנו חוזרים אליך.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn-whatsapp" href="https://wa.me/972504378400?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20Fly2Win%20VIP%20%D7%98%D7%99%D7%95%D7%9C%D7%99%20%D7%A7%D7%96%D7%99%D7%A0%D7%95.">
+            💬 שלחו לי וואטסאפ
+          </a>
+          <a class="btn-outline" href="mailto:fly2win.vip@gmail.com?subject=Fly2Win%20VIP%20-%20בירור">
+            ✉ כתבו לנו במייל
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">טופס פניה מהירה</div>
+        </div>
+        <form>
+          <div>
+            <label for="name">שם מלא</label>
+            <input id="name" type="text" placeholder="איך לפנות אליך?" />
+          </div>
+          <div>
+            <label for="phone">טלפון</label>
+            <input id="phone" type="tel" placeholder="מספר נייד לחזרה" />
+          </div>
+          <div>
+            <label for="whatsapp">מספר וואטסאפ (אם שונה)</label>
+            <input id="whatsapp" type="tel" placeholder="לא חובה" />
+          </div>
+          <div>
+            <label for="exp">כמה מנוסה אתה במשחקי קזינו?</label>
+            <select id="exp">
+              <option>פחות מנוסה, משחק מדי פעם</option>
+              <option>מנוסה, משחק כמה פעמים בשנה</option>
+              <option>שחקן כבד יחסית</option>
+            </select>
+          </div>
+          <div>
+            <label for="msg">מה חשוב לך שנדע?</label>
+            <textarea id="msg" placeholder="באיזה סוג משחקים אתה אוהב לשחק, יעד מועדף, תאריכים אפשריים ועוד..."></textarea>
+          </div>
+          <div class="form-note">
+            הטופס כאן לתצוגה בלבד. בגיטהאב פייג'ס אין צד שרת, לכן ההמלצה היא להסתמך על וואטסאפ או מייל לפניות בפועל.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 <span>Fly2Win VIP</span> - חבילות קזינו פרימיום בחו"ל. כל הזכויות שמורות.
+</footer>
+
+</body>
+</html>
