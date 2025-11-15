@@ -592,21 +592,6 @@
       margin-top: 10px;
     }
 
-    .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      background: #25d366;
-      color: #041208;
-      font-size: 13px;
-      font-weight: 600;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.6);
-    }
-
     .btn-outline {
       display: inline-flex;
       align-items: center;
@@ -880,7 +865,7 @@
         </div>
         <p>לפני ההרשמה תדע בדיוק מה התנאים: מינימום שעות משחק, מסגרת תקציב מומלצת, מה הקזינו נותן ומה אתה מתחייב.</p>
         <ul class="card-list">
-          <li><i>✔</i><span>הסבר טלפוני מלא לפני סגירה</span></li>
+          <li><i>✔</i><span>הסבר מלא לפני סגירה</span></li>
           <li><i>✔</i><span>הסכם כתוב עם כל התנאים, בעברית</span></li>
         </ul>
       </div>
@@ -906,7 +891,7 @@
       תהליך הרשמה מסודר, 4 שלבים פשוטים. בלי כאבי ראש ובלי חוסר ודאות.
     </p>
 
-    <div class="grid grid-4">
+    <div class="grid" style="grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px;">
       <div class="card">
         <div class="card-header">
           <div class="card-title">1. משאירים פרטים</div>
@@ -914,7 +899,7 @@
         </div>
         <p>אתה ממלא טופס קצר. אנחנו חוזרים אליך לשיחה אישית ומבינים מי אתה כשחקן.</p>
         <ul class="card-list">
-          <li><i>➤</i><span>סגנון משחק, תקציב, יעד מועדף</span></li>
+          <li><i>➤</i><span>סגנון משחק, יעד מועדף, תדירות משחק</span></li>
         </ul>
       </div>
 
@@ -990,7 +975,7 @@
         <div class="price-note">בן או בת זוג, חברים, משפחה</div>
         <p>אורח שמצטרף לשחקן אינו חייב להתחייב לזמן משחק. נהנה מהמלון, מהעיר ומהאווירה.</p>
         <ul class="card-list">
-          <li><i>✔</i><span>טיסה ומלון לצד השחקן</span></li>
+          <li><i>✔</i><span>לינה לצד השחקן במלון</span></li>
           <li><i>✔</i><span>אפשרות לאטרקציות וטיולים באזור</span></li>
           <li><i>✔</i><span>מתאים גם למי שלא משחק בכלל</span></li>
         </ul>
@@ -1087,12 +1072,12 @@
         <div class="testimonial-name">י', בן 38, מרכז</div>
 
         <p class="testimonial">
-          "יצאנו קבוצה של 10 חברים, חלק שיחקו וחלק פחות. Fly2Win VIP דאגו למלון מחובר לקזינו, הסעות, והיו זמינים בוואטסאפ כל הזמן."
+          "יצאנו קבוצה של 10 חברים, חלק שיחקו וחלק פחות. Fly2Win VIP דאגו למלון מחובר לקזינו, הסעות, והיו זמינים לאורך כל הדרך."
         </p>
         <div class="testimonial-name">ר', בן 42, צפון</div>
 
         <p class="testimonial">
-          "בתור אחד שמשחק כמה פעמים בשנה, זה פתרון מעולה. אני יודע כמה אני מתכנן לשחק, והם מביאים את הדיל הכי טוב מהקזינו."
+          "בתור אחד שמשחק כמה פעמים בשנה, זה פתרון מעולה. אני יודע מה אני מתכנן לשחק, והם מביאים את הדיל הכי טוב מהקזינו."
         </p>
         <div class="testimonial-name">ד', בן 45, שרון</div>
       </div>
@@ -1134,7 +1119,7 @@
         <div class="faq-item">
           <div class="faq-question">איך ממשיכים מפה?</div>
           <div class="faq-answer">
-            ממלאים את הטופס הקצר למטה או כותבים לנו בוואטסאפ. נקבע שיחה קצרה, נסביר הכל, ואם זה מתאים, נשריין מקום בטיול הבא.
+            ממלאים את הטופס הקצר למטה או כותבים לנו במייל. נקבע שיחה קצרה, נסביר הכל, ואם זה מתאים, נשריין מקום בטיול הבא.
           </div>
         </div>
       </div>
@@ -1145,28 +1130,22 @@
   <section id="contact">
     <h2 class="section-title">רוצה לבדוק אם אתה מתאים ל Fly2Win VIP?</h2>
     <p class="section-subtitle">
-      השלב הבא הוא שיחה קצרה, לא מחייבת, בה נסביר הכל ונבדוק ביחד אם זה מתאים לך. אין פה "לחץ לסגור עכשיו".
+      השלב הבא הוא שיחה קצרה, לא מחייבת, בה נסביר הכל ונבדוק ביחד אם זה מתאים לך. אין כאן לחץ לסגור עכשיו.
     </p>
 
     <div class="contact-grid">
       <div class="card">
         <div class="card-header">
-          <div class="card-title">פרטי קשר ישיר</div>
+          <div class="card-title">פרטי קשר</div>
         </div>
-        <p class="contact-row">
-          <strong>טלפון:</strong> 050-4378400
-        </p>
         <p class="contact-row">
           <strong>אימייל:</strong> fly2win.vip@gmail.com
         </p>
         <p class="contact-row">
-          <strong>וואטסאפ:</strong> הודעה קצרה עם "מעוניין בטיול קזינו" ואנחנו חוזרים אליך.
+          <strong>איך יוצרים קשר?</strong> שולחים לנו מייל או ממלאים את הטופס, ואנחנו חוזרים אליך.
         </p>
 
         <div class="contact-actions">
-          <a class="btn-whatsapp" href="https://wa.me/972504378400?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20Fly2Win%20VIP%20%D7%98%D7%99%D7%95%D7%9C%D7%99%20%D7%A7%D7%96%D7%99%D7%A0%D7%95.">
-            💬 שלחו לי וואטסאפ
-          </a>
           <a class="btn-outline" href="mailto:fly2win.vip@gmail.com?subject=Fly2Win%20VIP%20-%20בירור">
             ✉ כתבו לנו במייל
           </a>
@@ -1183,12 +1162,8 @@
             <input id="name" type="text" placeholder="איך לפנות אליך?" />
           </div>
           <div>
-            <label for="phone">טלפון</label>
-            <input id="phone" type="tel" placeholder="מספר נייד לחזרה" />
-          </div>
-          <div>
-            <label for="whatsapp">מספר וואטסאפ (אם שונה)</label>
-            <input id="whatsapp" type="tel" placeholder="לא חובה" />
+            <label for="email">אימייל</label>
+            <input id="email" type="email" placeholder="כתובת מייל לחזרה" />
           </div>
           <div>
             <label for="exp">כמה מנוסה אתה במשחקי קזינו?</label>
@@ -1203,7 +1178,7 @@
             <textarea id="msg" placeholder="באיזה סוג משחקים אתה אוהב לשחק, יעד מועדף, תאריכים אפשריים ועוד..."></textarea>
           </div>
           <div class="form-note">
-            הטופס כאן לתצוגה בלבד. בגיטהאב פייג'ס אין צד שרת, לכן ההמלצה היא להסתמך על וואטסאפ או מייל לפניות בפועל.
+            הטופס כאן לתצוגה בלבד. בגיטהאב פייג'ס אין צד שרת, לכן מומלץ לפנות במייל לצורך תיאום בפועל.
           </div>
         </form>
       </div>
